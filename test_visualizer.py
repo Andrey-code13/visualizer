@@ -30,6 +30,8 @@ class TestGitVisualization(unittest.TestCase):
         commits = ['commit1', 'commit2']
         graph = build_dependency_graph(commits)
         expected_graph = {
+            'commit1':[],
+            'commit2': [],
             'parent1': ['commit1'],
             'parent2': ['commit2'],
         }
